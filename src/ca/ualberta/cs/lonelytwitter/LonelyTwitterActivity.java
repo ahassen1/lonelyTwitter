@@ -49,11 +49,21 @@ public class LonelyTwitterActivity extends Activity {
 	@Override
 	protected void onStart() {
 		// TODO Auto-generated method stub
+		
+
+		
+			
+		
 		super.onStart();
 		String[] tweets = loadFromFile();
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
 				R.layout.list_item, tweets);
 		oldTweetsList.setAdapter(adapter);
+		User u = new Auhor();
+		ArrayList<User> array = new ArrayList<User>();
+		
+		
+		u.setUsername("joe");
 	}
 
 	private String[] loadFromFile() {
