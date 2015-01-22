@@ -2,66 +2,63 @@ package ca.ualberta.cs.lonelytwitter;
 
 import java.util.ArrayList;
 
-
 public class Friendship extends User implements Friends
 {
-private ArrayList<String> friendList= new ArrayList<String>();
-protected String username;
 
+	private ArrayList<String> friendList = new ArrayList<String>();
+	protected String username;
 
+	public ArrayList<String> getFriendList()
+	{
 
+		return friendList;
+	}
 
-public ArrayList<String> getFriendList()
-{
+	public void setFriend(String user)
+	{
 
-	return friendList;
-}
-public void setFriend(String user){
-	this.friendList.add(user);
-}
+		this.friendList.add(user);
+	}
 
-public void deleteFriend(String user){
-	this.friendList.remove(user);
-}
+	public void deleteFriend(String user)
+	{
 
-public void setFriendList(ArrayList<String> friendList)
-{
+		this.friendList.remove(user);
+	}
 
-	this.friendList = friendList;
-}
+	public void setFriendList(ArrayList<String> friendList)
+	{
 
+		this.friendList = friendList;
+	}
 
-public String getUsername()
-{
+	public String getUsername()
+	{
 
-	return this.username;
-}
+		return this.username;
+	}
 
+	public void setUsername(String username)
+	{
 
-public  void setUsername(String username){
-	this.username=username;
-}
+		this.username = username;
+	}
 
+	public Friendship()
+	{
 
+		super();
+		this.username = "anonymous";
+		this.friendList = new ArrayList<String>();
+	}
 
-public Friendship()
-{
+	public Friendship(String username, ArrayList<String> usersList)
+	{
 
-	super();
-	this.username="anonymous";
-	this.friendList= new ArrayList<String>();
-}
-
-
-
-public Friendship(String username,ArrayList<String> usersList)
-{
-
-	super();
-	this.username=username;
-	this.friendList=usersList;
-	// TODO Auto-generated constructor stub
-}
-
+		super();
+		this.username = username;
+		this.friendList = usersList;
+		// TODO Auto-generated constructor stub
+	}
 
 }
